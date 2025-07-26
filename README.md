@@ -1,9 +1,21 @@
-<<<<<<< HEAD
 # Graphiti MCP Server
+[中文版本](README_zh.md)
 
-Graphiti is a framework for building and querying temporally-aware knowledge graphs, specifically tailored for AI agents operating in dynamic environments. Unlike traditional retrieval-augmented generation (RAG) methods, Graphiti continuously integrates user interactions, structured and unstructured enterprise data, and external information into a coherent, queryable graph.
+This is a standalone Model Context Protocol (MCP) server implementation for Graphiti, specifically designed as an independent service with enhanced features.
 
-This standalone Model Context Protocol (MCP) server implementation for Graphiti exposes Graphiti's key functionality through the MCP protocol, allowing AI assistants to interact with Graphiti's knowledge graph capabilities.
+## Source Repository
+
+This project is based on the official [Graphiti](https://github.com/getzep/graphiti) project. The original Graphiti framework provides the core functionality for building and querying temporally-aware knowledge graphs.
+
+This standalone edition maintains compatibility with the original Graphiti while adding enhanced features and improved performance through FastMCP refactoring.
+
+## Key Differences from Official Graphiti MCP
+
+This standalone edition differs from the official Graphiti MCP implementation in the following ways:
+
+1. **Client-defined Group ID**: Unlike the official version, this implementation allows clients to define their own `group_id` for better data organization and isolation.
+
+2. **FastMCP Refactoring**: The server has been refactored using FastMCP framework for improved performance and maintainability.
 
 ## Features
 
@@ -21,16 +33,11 @@ The Graphiti MCP server exposes the following key high-level functions of Graphi
 
 1. Ensure you have Python 3.10 or higher installed.
 2. Install the package using pip:
+install from source:
 
 ```bash
-pip install graphiti-mcp-server
-```
-
-Or install from source:
-
-```bash
-git clone https://github.com/getzep/graphiti.git
-cd graphiti/mcp_server
+git clone git@github.com:dreamnear/graphiti-mcp.git
+cd graphiti-mcp
 pip install -e .
 ```
 
@@ -163,6 +170,19 @@ The server uses the following environment variables:
 }
 ```
 
+### HTTP Transport (for general HTTP clients)
+
+```json
+{
+  "mcpServers": {
+    "graphiti-memory": {
+      "transport": "http",
+      "url": "http://localhost:8000/mcp"
+    }
+  }
+}
+```
+
 ### SSE Transport (for Cursor, etc.)
 
 ```json
@@ -206,12 +226,4 @@ add_memory(
 
 - Python 3.10 or higher
 - Neo4j database (version 5.26 or later required)
-- OpenAI API key (for LLM operations and embeddings, optional)
-
-## License
-
-This project is licensed under the Apache-2.0 License - see the LICENSE file for details.
-=======
-# graphiti-mcp
-基于graphiti项目的mcp
->>>>>>> 055a68d8ee7e2e9909130ad31342f36e5c2b4ffe
+- OpenAI API key (for LLM operations and embeddings)
