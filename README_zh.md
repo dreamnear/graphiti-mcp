@@ -176,8 +176,8 @@ docker-compose up
 {
   "mcpServers": {
     "graphiti-memory": {
-      "transport": "http",
-      "url": "http://localhost:8000/mcp"
+      "type": "http",
+      "url": "http://localhost:8000/mcp/?group_id=default"
     }
   }
 }
@@ -227,4 +227,3 @@ add_memory(
 - Python 3.10 或更高版本
 - Neo4j 数据库（需要 5.26 或更高版本）
 - OpenAI API 密钥（用于 LLM 操作和嵌入）
-

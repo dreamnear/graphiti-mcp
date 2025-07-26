@@ -3,10 +3,6 @@ name = "graphiti-mcp-server"
 version = "0.4.0"
 description = "Graphiti MCP Server - A Model Context Protocol server for Graphiti knowledge graphs"
 readme = "README.md"
-authors = [
-    { "name" = "Zep AI Team", "email" = "support@getzep.com" },
-]
-license = "Apache-2.0"
 requires-python = ">=3.10,<4"
 dependencies = [
     "fastmcp>=2.0.0",
@@ -17,14 +13,3 @@ dependencies = [
     "typing-extensions>=4.0.0",
 ]
 
-[project.urls]
-Homepage = "https://help.getzep.com/graphiti"
-Repository = "https://github.com/getzep/graphiti"
-Documentation = "https://help.getzep.com/graphiti"
-
-[project.scripts]
-graphiti-mcp-server = "graphiti_mcp_server:main"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"

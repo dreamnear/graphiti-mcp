@@ -176,8 +176,8 @@ The server uses the following environment variables:
 {
   "mcpServers": {
     "graphiti-memory": {
-      "transport": "http",
-      "url": "http://localhost:8000/mcp"
+      "type": "http",
+      "url": "http://localhost:8000/mcp/?group_id=default"
     }
   }
 }
