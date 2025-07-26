@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Graphiti MCP Server
 
 Graphiti is a framework for building and querying temporally-aware knowledge graphs, specifically tailored for AI agents operating in dynamic environments. Unlike traditional retrieval-augmented generation (RAG) methods, Graphiti continuously integrates user interactions, structured and unstructured enterprise data, and external information into a coherent, queryable graph.
@@ -210,3 +211,7 @@ add_memory(
 ## License
 
 This project is licensed under the Apache-2.0 License - see the LICENSE file for details.
+=======
+# graphiti-mcp
+基于graphiti项目的mcp
+>>>>>>> 055a68d8ee7e2e9909130ad31342f36e5c2b4ffe
